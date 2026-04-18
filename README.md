@@ -1,75 +1,99 @@
-# Resume Builder
+# 🚀 Resume Builder
 
-Resume Builder is a web application for creating, editing, and sharing professional resumes. It includes AI-assisted summary enhancement, customizable templates, live preview, and public resume publishing.
+A full-stack web application that helps users create, customize, and share professional resumes with ease. It includes AI-powered summary enhancement, live preview, and public resume sharing.
 
-## Features
+## ✨ Features
 
-- Create and edit resumes with sections for:
-  - Personal information
-  - Professional summary
-  - Work experience
+- 📄 Create and edit resumes with structured sections:
+  - Personal Information
+  - Professional Summary
+  - Work Experience
   - Education
   - Projects
   - Skills
-- AI enhancement for professional summary content
-- Live resume preview
-- Template selection and accent color customization
-- Save and update resumes
-- Public sharing and preview of published resumes
+- 🤖 AI-powered enhancement for professional summaries
+- 👀 Live resume preview
+- 🎨 Multiple templates with accent color customization
+- 💾 Save and update resumes anytime
+- 🌐 Public resume sharing via unique link
 
-## Tech Stack
+## 🛠 Tech Stack
 
-- Frontend: React, Vite
-- Backend: Node.js, Express
-- Database: MongoDB
-- AI: OpenAI API
-- File upload: multer
-- Authentication: JWT-based auth
+### Frontend
 
-## Project Structure
+- React
+- Vite
 
-- `client/` — React frontend application
-- `server/` — Express backend API
-- `server/controllers/` — API request handlers
-- `server/models/` — Mongoose data models
-- `server/router/` — Express route definitions
-- `client/src/components/` — Reusable UI components
-- `client/src/pages/` — Page-level components
-
-## Getting Started
-
-### Prerequisites
+### Backend
 
 - Node.js
+- Express
+
+### Database
+
+- MongoDB
+
+### Other Tools
+
+- OpenAI API (AI features)
+- Multer (file uploads)
+- JWT (authentication & authorization)
+
+## 📁 Project Structure
+
+```
+Resume Builder/
+│
+├── client/                 # React frontend
+│   ├── src/
+│   │   ├── components/     # Reusable UI components
+│   │   └── pages/          # Page-level components
+│
+├── server/                 # Express backend
+│   ├── controllers/        # Request handlers
+│   ├── models/             # Mongoose schemas
+│   └── router/             # API routes
+```
+
+## ⚙️ Getting Started
+
+### 📌 Prerequisites
+
+Make sure you have:
+
+- Node.js installed
 - npm or yarn
-- MongoDB database
+- MongoDB (local or cloud)
 - OpenAI API key
 
-### Setup
+### 🔧 Installation
 
-1. Clone the repository:
-   ```bash
-   git clone <your-repo-url>
-   cd "Resume Builder"
-   ```
+Clone the repository:
 
-2. Install dependencies:
-   ```bash
-   cd client
-   npm install
-   cd ../server
-   npm install
-   ```
+```bash
+git clone <your-repo-url>
+cd "Resume Builder"
+```
 
-3. Create environment variables.
+Install dependencies:
+
+```bash
+cd client
+npm install
+
+cd ../server
+npm install
+```
+
+### 🔐 Environment Variables
 
 #### `server/.env`
 
 ```env
 PORT=5000
-MONGO_URI=<your-mongodb-uri>
-JWT_SECRET=<your-jwt-secret>
-OPENAI_API_KEY=<your-openai-api-key>
+MONGO_URI=your_mongodb_uri
+JWT_SECRET=your_jwt_secret
+OPENAI_API_KEY=your_openai_api_key
 OPENAI_MODEL=gpt-4o-mini
 ```
 
@@ -79,45 +103,44 @@ OPENAI_MODEL=gpt-4o-mini
 VITE_BASE_URL=http://localhost:5000
 ```
 
-### Run Locally
+### ▶️ Run the Application
 
-From the `server/` folder:
+Start backend:
+
 ```bash
+cd server
 npm run dev
 ```
 
-From the `client/` folder:
+Start frontend:
+
 ```bash
+cd client
 npm run dev
 ```
 
-Open the client URL shown by Vite, usually `http://localhost:5173`.
+Open in browser:
 
-## Notes
+http://localhost:5173
 
-- The public resume preview route is served from `/api/resumes/public/:resumeId`.
-- If the AI enhancement feature returns generic text, ensure the prompt is passed correctly and the input summary is not empty.
+## 🔗 API Notes
 
-## License
+Public resume preview endpoint:
 
-MIT License
+`/api/resumes/public/:resumeId`
 
-Copyright (c) 2026
+## ⚠️ Common Issues
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+If AI summary feels generic:
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+- Make sure input text is not empty
+- Check prompt formatting in backend
+- Verify OpenAI API key is working
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+## 📄 License
+
+MIT License © 2026
+
+Permission is granted to use, modify, and distribute this software freely.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
