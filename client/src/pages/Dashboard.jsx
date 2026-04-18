@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import toast from 'react-hot-toast'
 import api from '../configs/api'
-import pdfToText from 'react-pdfToText'
+import pdfToText from "react-pdftotext"
 
 const Dashboard = () => {
 
